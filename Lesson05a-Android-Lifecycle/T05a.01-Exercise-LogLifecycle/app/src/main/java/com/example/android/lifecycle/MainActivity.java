@@ -47,20 +47,57 @@ public class MainActivity extends AppCompatActivity {
 
         mLifecycleDisplay = (TextView) findViewById(R.id.tv_lifecycle_events_display);
 
-        // TODO (1) Use logAndAppend within onCreate
+        logAndAppend("OnCreate Called");
+        // Completed (1) Use logAndAppend within onCreate
     }
 
-    // TODO (2) Override onStart, call super.onStart, and call logAndAppend with ON_START
+    @Override
+    protected void onStart() {
+        super.onStart();
+        logAndAppend("onStart Called");
+    }
 
-    // TODO (3) Override onResume, call super.onResume, and call logAndAppend with ON_RESUME
+    // Completed (2) Override onStart, call super.onStart, and call logAndAppend with ON_START
 
-    // TODO (4) Override onPause, call super.onPause, and call logAndAppend with ON_PAUSE
+    @Override
+    protected void onResume() {
+        super.onResume();
+        logAndAppend("onResume Called");
+    }
 
-    // TODO (5) Override onStop, call super.onStop, and call logAndAppend with ON_STOP
+    @Override
+    protected void onPause() {
+        super.onPause();
+        logAndAppend("onPause Called");
+    }
 
-    // TODO (6) Override onRestart, call super.onRestart, and call logAndAppend with ON_RESTART
+    @Override
+    protected void onStop() {
+        super.onStop();
+        logAndAppend("onStop Called");
+    }
 
-    // TODO (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        logAndAppend("onRestart Called");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        logAndAppend("onDestroy Called");
+    }
+
+    // Completed (3) Override onResume, call super.onResume, and call logAndAppend with ON_RESUME
+
+    // Completed (4) Override onPause, call super.onPause, and call logAndAppend with ON_PAUSE
+
+    // Completed (5) Override onStop, call super.onStop, and call logAndAppend with ON_STOP
+
+    // Completed (6) Override onRestart, call super.onRestart, and call logAndAppend with ON_RESTART
+
+    // Completed (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
 
     /**
      * Logs to the console and appends the lifecycle method name to the TextView so that you can
