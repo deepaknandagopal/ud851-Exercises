@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         return new AsyncTaskLoader<String>(this) {
             @Override
             protected void onStartLoading() {
-                super.onStartLoading();java
+                super.onStartLoading();
                 if(args == null)
                 {
                     return;
