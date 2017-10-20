@@ -104,9 +104,9 @@ public class TaskContentProvider extends ContentProvider {
             default:
                 throw new UnsupportedOperationException("Unknown uri: "+uri);
         }
-        // TODO (4) Set the value for the returnedUri and write the default case for unknown URI's
+        // Completed (4) Set the value for the returnedUri and write the default case for unknown URI's
 
-        // TODO (5) Notify the resolver if the uri has been changed, and return the newly inserted URI
+        // Completed (5) Notify the resolver if the uri has been changed, and return the newly inserted URI
         getContext().getContentResolver().notifyChange(uri,null);
         return returnUri;
 
