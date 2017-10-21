@@ -30,6 +30,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 
+import com.example.android.todolist.data.TaskContentProvider;
 import com.example.android.todolist.data.TaskContract;
 
 
@@ -152,12 +153,15 @@ public class MainActivity extends AppCompatActivity implements
                 try{
 
                     return getContentResolver().query(TaskContract.TaskEntry.CONTENT_URI,null,null,null,TaskContract.TaskEntry.COLUMN_PRIORITY);
+                    //return getContentResolver().query(TaskContract.TaskEntry.CONTENT_URI,null,"_id",[2],null);
+                    //getContentResolver().query(TaskContract.TaskEntry.CONTENT_URI, null, TaskContract.TaskEntry.COLUMN_PRIORITY + " = ?" , Integer.toString(1) , null);
+
                 }catch (Exception e)
                 {
                     e.printStackTrace();
                     return null;
                 }
-                // TODO (5) Query and load all task data in the background; sort by priority
+                // Completed (5) Query and load all task data in the background; sort by priority
                 // [Hint] use a try/catch block to catch any errors in loading data
             }
 
